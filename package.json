@@ -1,0 +1,83 @@
+{
+  "name": "@vivianhealth/circleci-restart-workflow",
+  "version": "0.0.1",
+  "description": "Restart a CircleCI workflow",
+  "repository": "https://github.com/nursefly/circleci-restart-workflow",
+  "author": "Vivian Health",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "circleci-restart-workflow": "bin/circleci-restart-workflow.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "circleci-restart-workflow": "node bin/circleci-restart-workflow.js",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "shx rm -rf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "18.11.18",
+    "@types/node-fetch": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "semantic-release": "^20.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.9.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": "prettier --write",
+    "*.{js,ts}": "eslint --fix"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  }
+}
