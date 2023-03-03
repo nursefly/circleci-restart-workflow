@@ -1,9 +1,9 @@
 # `circleci-restart-workflow`
 
-![](https://img.shields.io/npm/v/@vivianhealth/circleci-restart-workflow)
-![](https://img.shields.io/github/package-json/v/nursefly/circleci-restart-workflow)
-![](https://img.shields.io/node/v/@vivianhealth/circleci-restart-workflow)
-![](https://img.shields.io/npm/types/@vivianhealth/circleci-restart-workflow)
+![](https://img.shields.io/npm/v/@vivianhealth/circleci-restart-workflow?v=20230303)
+![](https://img.shields.io/github/package-json/v/nursefly/circleci-restart-workflow?v=20230303)
+![](https://img.shields.io/node/v/@vivianhealth/circleci-restart-workflow?v=20230303)
+![](https://img.shields.io/npm/types/@vivianhealth/circleci-restart-workflow?v=20230303)
 
 This utility uses the CirlceCI V2 API to cancel a workflow running for a specific
 HEAD commit on a specific branch if it's running and then restart it (regardless
