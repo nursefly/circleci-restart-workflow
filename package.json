@@ -1,6 +1,6 @@
 {
   "name": "@vivianhealth/circleci-restart-workflow",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Restart a CircleCI workflow",
   "repository": "https://github.com/nursefly/circleci-restart-workflow",
   "author": "Vivian Health",
