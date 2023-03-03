@@ -1,6 +1,6 @@
 name: Verify and Maybe Release
 
-on: [push]
+on: push
 
 jobs:
   verify-and-maybe-release:
