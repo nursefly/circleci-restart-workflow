@@ -24,9 +24,12 @@ install it as long as `npm` is installed.
 
 ```bash
 npx -y -p @vivianhealth/circleci-restart-workflow@latest \
-    circleci-restart-workflow \
-    --commit-sha <commit-sha> \
-    --branch <branch>
+    circleci-restart-workflow -- \
+      -w <workflow-name> \
+      -b <branch> \
+      -t <circleci-api-token> \
+      -o <github-organization> \
+      -p <github-repository>
 ```
 
 To install and lock in a specific version into your project dependencies (recommended):
@@ -38,9 +41,12 @@ npm install --save-dev @vivianhealth/circleci-restart-workflow
 And then to run the CLI tool inside your project directory:
 
 ```bash
-npx circleci-restart-workflow \
-    --commit-sha <commit-sha> \
-    --branch <branch>
+npx circleci-restart-workflow -- \
+  -w <workflow-name> \
+  -b <branch> \
+  -t <circleci-api-token> \
+  -o <github-organization> \
+  -p <github-repository>
 ```
 
 ## Publishing
